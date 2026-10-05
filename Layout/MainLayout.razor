@@ -19,9 +19,9 @@
         <MudStack Row="true" Spacing="1" AlignItems="AlignItems.Center">
             <MudIconButton Icon="@DarkLightModeButtonIcon" Color="Color.Inherit" OnClick="@DarkModeToggle" aria-label="Alternar tema claro e escuro" />
             <MudMenu AnchorOrigin="Origin.BottomRight" TransformOrigin="Origin.TopRight" aria-label="Notificações">
-                <ActivatorContent>
+                <ActivatorContent Context="menu">
                     @* O padding fica no wrapper para manter o badge junto ao sino. *@
-                    <div class="d-flex pa-3 cursor-pointer">
+                    <div class="d-flex pa-3 cursor-pointer" @onclick="menu.ToggleAsync">
                         <MudBadge Content="@_notificacoes.Count" Color="Color.Error">
                             <MudIcon Icon="@Icons.Material.Outlined.Notifications" Size="Size.Medium" />
                         </MudBadge>
@@ -41,20 +41,22 @@
             </MudMenu>
             <MudDivider Vertical="true" FlexItem="true" Class="mx-3 my-4" />
             <MudMenu AnchorOrigin="Origin.BottomRight" TransformOrigin="Origin.TopRight" aria-label="Menu do usuário">
-                <ActivatorContent>
+                <ActivatorContent Context="menu">
+                    <div class="cursor-pointer" @onclick="menu.ToggleAsync">
                     <MudStack Row="true" AlignItems="AlignItems.Center" Spacing="2">
                         <MudAvatar Size="Size.Large">
-                            <MudImage Src="img/alex-morgan.jpg" Alt="Alex Morgan" />
+                            <MudImage Src="img/images.jpg" Alt="Tupac Shakur" />
                         </MudAvatar>
                         <MudStack Spacing="0" Class="d-none d-md-flex">
                             <MudStack Row="true" Spacing="2" AlignItems="AlignItems.Center">
-                                <MudText Typo="Typo.subtitle2">Alex Morgan</MudText>
+                                <MudText Typo="Typo.subtitle2">Tupac Shakur</MudText>
                                 <MudChip T="string" Size="Size.Small" Color="Color.Success" Variant="Variant.Text" Class="ma-0">Online</MudChip>
                             </MudStack>
                             <MudText Typo="Typo.caption" Class="mud-text-secondary">alex.morgan@afya.com.br</MudText>
                         </MudStack>
                         <MudIcon Icon="@Icons.Material.Filled.KeyboardArrowDown" Size="Size.Small" />
                     </MudStack>
+                    </div>
                 </ActivatorContent>
                 <ChildContent>
                     <MudMenuItem Icon="@Icons.Material.Outlined.Person">Perfil</MudMenuItem>
