@@ -16,6 +16,21 @@
             <KpiCard Kpi="kpi" />
         </MudItem>
     }
+    <MudItem xs="12" lg="7">
+        <GraficoReceita Meses="DashboardData.Meses" Receita="DashboardData.ReceitaMensal" Meta="DashboardData.MetaMensal" />
+    </MudItem>
+    <MudItem xs="12" lg="5">
+        <GraficoDistribuicaoClientes Total="DashboardData.TotalClientes" Segmentos="DashboardData.SegmentosClientes" />
+    </MudItem>
+    <MudItem xs="12" lg="7">
+        <PerformanceProjetos Projetos="DashboardData.Performance" />
+    </MudItem>
+    <MudItem xs="12" lg="5">
+        <AtividadesRecentes Atividades="DashboardData.Atividades" />
+    </MudItem>
+    <MudItem xs="12">
+        <ProjetosRecentes Projetos="DashboardData.ProjetosRecentes" />
+    </MudItem>
 </MudGrid>
 
 @code {
