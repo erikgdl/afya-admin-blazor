@@ -43,7 +43,6 @@ O projeto integra HTML, C#, componentes reutilizáveis e organização de uma ap
 
 - Instalar o **.NET SDK 10.x**. Confira com `dotnet --version`.
 - Ter o Git instalado e acesso ao repositório para cloná-lo.
-- Usar um navegador atualizado; Chrome ou Edge permitem a depuração descrita no tutorial.
 - Ter conexão à internet para restaurar os pacotes NuGet e carregar as fontes externas.
 
 ### Clonar e iniciar
@@ -144,7 +143,6 @@ afya-admin/
 ├── App.razor
 ├── Program.cs
 ├── README.md
-└── tutorial.pdf
 ```
 
 | Pasta/arquivo | Responsabilidade |
@@ -224,5 +222,3 @@ O C# não permite hífen em nomes como o namespace, pois ele representa uma subt
 - Filtrar a tabela de projetos pelo campo de busca.
 - Carregar os dados de JSON ou de um serviço `IDashboardService`, mostrando um estado de carregamento.
 - Salvar a preferência de tema no `localStorage`.
-
-Essas melhorias correspondem a evoluções opcionais do tutorial e ainda não estão implementadas nesta versão.
